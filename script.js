@@ -30,6 +30,19 @@ function deleteTask(id) {
   renderTasks();
 }
 
+function clearAllTasks() {
+  if (confirm("Are you sure you want to clear all tasks?")) {
+    tasks = [];
+    renderTasks();
+  }
+}
+
+function updateClearButton() {
+  const clearBtn = document.getElementById("clearAllBtn");
+  clearBtn.disabled = tasks.length === 0;
+}
+
+// Update the renderTasks function to also update the clear button
 function renderTasks() {
   taskList.innerHTML = "";
 
@@ -41,4 +54,6 @@ function renderTasks() {
         `;
     taskList.appendChild(li);
   });
+
+  updateClearButton(); // Add this line
 }
