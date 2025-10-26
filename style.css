@@ -27,3 +27,19 @@ li {
   padding: 10px;
   border-bottom: 1px solid #eee;
 }
+
+button:hover {
+  background: #005fc4;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task button {
+  background: #dc3545;
+  font-size: 12px;
+  padding: 5px 10px;
+}
