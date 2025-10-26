@@ -25,12 +25,20 @@ function addTask(text) {
   renderTasks();
 }
 
+function deleteTask(id) {
+  tasks = tasks.filter((task) => task.id !== id);
+  renderTasks();
+}
+
 function renderTasks() {
   taskList.innerHTML = "";
 
   tasks.forEach((task) => {
     const li = document.createElement("li");
-    li.textContent = task.text;
+    li.innerHTML = `
+            <span>${task.text}</span>
+            <button onclick="deleteTask(${task.id})">Delete</button>
+        `;
     taskList.appendChild(li);
   });
 }
