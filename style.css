@@ -37,3 +37,9 @@ button:hover {
   justify-content: space-between;
   align-items: center;
 }
+
+.task button {
+  background: #dc3545;
+  font-size: 12px;
+  padding: 5px 10px;
+}
